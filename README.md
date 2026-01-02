@@ -2,6 +2,10 @@
 
 A lightweight Streamlit frontend for RAG over uploaded PDFs. Upload one or more PDFs, index them into a local Chroma vector store with HuggingFace embeddings, and ask questions answered by Groq’s `llama-3.3-70b-versatile` model.
 
+## Live demo
+
+[Live on streamlit](https://mutlidocragapp-bge7txchobov2capp4fmwzd.streamlit.app/)
+
 ## Features
 
 - Multi-PDF upload (drag/drop)
