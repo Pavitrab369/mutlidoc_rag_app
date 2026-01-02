@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 
-from langchain_community.document_loaders import UnstructuredPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
@@ -24,7 +24,7 @@ def process_document_to_chroma_db(pdf_path):
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"PDF not found: {pdf_path}")
 
-    loader = UnstructuredPDFLoader(pdf_path)
+    loader = PyPDFLoader(pdf_path)
 
     documents = loader.load()
 
